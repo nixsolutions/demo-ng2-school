@@ -1,0 +1,111 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    @media screen and (min-width: 750px) {
+        top: 92px;
+        max-width: 200px;
+    }
+    @media screen and (max-width: 750px) {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition: 1s transform ease;
+        transition: 1s transform ease;
+        padding-top: 62px;
+        &.active {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+    display: block;
+    height: 100%;
+    background-color: #e8e8e8;
+    z-index: 9;
+    &-wrapper {
+        @extend .wrapper;
+            padding: 0;
+            @media screen and (min-width: 750px) {
+                padding: 0 15px;
+            }
+    }
+    .icon {
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
+        color: #fff;
+        border-radius: 5px;
+        vertical-align: middle;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 5px;
+        @media screen and (min-width: 750px) {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+        &:before {
+            line-height: 50px;
+        }
+        &--grey {
+            background: $grey;
+        }
+        &--yellow {
+            background: $yellow;
+        }
+        &--orange {
+            background: $orange;
+        }
+        &--green {
+            background: $green;
+        }
+        &--pink {
+            background: $pink;
+        }
+        &--black {
+            background: $black;
+        }
+        &--dark-green {
+            background: $dark-green;
+        }
+        &--blue {
+            background: $blue;
+        }
+        &--gold {
+            background: $gold;
+        }
+    }
+    .navbar {
+        margin: 0 -15px;
+    }
+    .nav {
+        @media screen and (max-width: 750px) {
+            display: block;
+            .nav-item {
+                @include col-width;
+            }
+        }
+        &-item {
+            display: block;
+            text-align: center;
+            @media screen and (min-width: 750px) {
+                text-align: left;
+            }
+        }
+        &-link {
+            color: #8a8a8a;
+            font-weight: 400;
+            padding: 10px 15px;
+            &.active {
+                color: #424242;
+                font-weight: 700;
+            }
+        }
+        &-label {
+            display: block;
+            @media screen and (min-width: 750px) {
+                vertical-align: middle;
+                display: inline-block;
+            }
+        }
+    }
+}

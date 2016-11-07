@@ -1,0 +1,4 @@
+@mixin col-width {
+    float: left;
+    width: 3*100%/$col-count;
+}

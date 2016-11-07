@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+}
+.clearfix::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+.wrapper {
+    @extend .clearfix;
+    padding: 0 15px;
+    position: relative;
+}
+.page-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    min-height: 100%;
+    background-color: #e8e8e8;
+    overflow-x: hidden;
+}
+.page-content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+     flex: 1 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    width: 100%;
+    position: relative;
+}
+.main {
+    background-color: #fff;
+    width: 100%;
+    overflow: auto;
+    padding: 0;
+    padding-top: 62px;
+    @media screen and (min-width: 750px) {
+        padding-top: 107px;
+        padding-left: 200px;
+        border-top: 1px solid #ababab;
+        border-left: 1px solid #ababab;
+    }
+
+    @media screen and (max-width: 750px) {
+        &.active {
+            .main-wrapper,
+                .m-header {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+            }
+        }
+    }
+
+    &-wrapper {
+        @extend .wrapper;
+        padding: 0;
+        background: #fff;
+        @media screen and (min-width: 750px) {
+            padding: 0 15px;
+        }
+        @media screen and (max-width: 750px) {
+            position: absolute;
+            width: 100%;
+            top: 62px;
+            left: 0;
+            z-index: 9;
+            -webkit-transform: translateX(100%);
+             transform: translateX(100%);
+            -webkit-transition: 1s transform ease;
+             transition: 1s transform ease;
+        }
+    }
+   .m-header {
+            transform: translateX(100%);
+            transition: 1s transform ease;
+     }
+    &-row {
+        margin: 0 -30px;
+        @media screen and (min-width: 750px) {
+            margin: 0 -15px;
+        }
+    }
+}
+.align--middle{
+    .cell{
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

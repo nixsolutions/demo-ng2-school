@@ -1,0 +1,9 @@
+<div class="page-container">
+  <app-header></app-header>
+  <div class="page-content">
+    <app-sidebar class="sidebar active" [ngClass]="{active: _appService.isSidebarOpen}"></app-sidebar>
+    <main class="main clearfix" [ngClass]="{active: !_appService.isSidebarOpen}">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

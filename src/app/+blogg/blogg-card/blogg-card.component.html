@@ -1,0 +1,26 @@
+<div class="post">
+  <div class="post_header">
+    <img [src]="card.blogg_author.myPic?.url" class="post_img" *ngIf="card.blogg_author.myPic">
+    <img class="post_img" *ngIf="!card.blogg_author.myPic">
+    <div class="post_header_info">
+      <h4 class="post_topic">{{card.blogg_topic}}</h4>
+      <h5 class="post_author">Posted by: <span class="author">{{card.blogg_author.firstName}} {{card.blogg_author.lastName}}</span></h5>
+    </div>
+    <div class="post_date"><span class="rel_date">{{card.createdAt | date}}</span></div>
+    <div class="actions-menu">
+      <a class="actions-menu-icon fa fa-ellipsis-v fa-3x"></a>
+      <ul class="actions-menu-list">
+        <li class="actions-menu-item"><a class="actions-menu-link" tabindex="0" role="link">Удалить</a></li>
+        <li class="actions-menu-item"><a class="actions-menu-link" tabindex="0" role="link">Открепить</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="post-content">
+    <div class="post-content-thumbs">
+      <app-thumbnail [img]="card.images[0].image.url"></app-thumbnail>
+    </div>
+    <div class="post-content-text">
+      {{card.blogg_content}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.m-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    min-height: 62px;
+    background-color:#80b0f2;
+    z-index: 10;
+    color: #fff;
+    @media screen and (min-width: 750px) {
+        display: none;
+    }
+    &-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateY(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+    &-btn {
+        background: transparent;
+        border: 0;
+        outline: none;
+        float: right;
+        &--back {
+            @extend .m-header-btn;
+            float: left;
+            vertical-align: middle;
+        }
+    }
+}

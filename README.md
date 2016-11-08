@@ -1,7 +1,7 @@
 Angular 2.0 Demo Application - School blog
 ====================================================
 
-Simple SPA on Angular2.0, master/detail view (read only). Master contains 8 dummy icons and one real called “Blogg” [Demo](https://koa-reports-api.herokuapp.com/swagger/). 
+Simple SPA on Angular2.0, master/detail view (read only). Master contains 8 dummy icons and one real called “Blogg” [Demo](https://nixsolutions.github.io/demo-ng2-school/). 
 
 Features
 --------

@@ -1,7 +1,22 @@
 Angular 2.0 Demo Application - School blog
 ====================================================
 
-Simple SPA on Angular2.0, master/detail view (read only). Master contains 8 dummy icons and one real called “Blogg” [Demo](https://nixsolutions.github.io/demo-ng2-school/). 
+In general words it’s SPA application built with  Angular 2.0.  This simple application was developed according to the client’s requirements. Original requirements:
+
+Simple app page, master/detail the view.
+Master contains 8 dummy icons and one real called “Blogg”(UI is not important)
+When the blog-button is clicked the detail view shows a view with “cards” 
+Each row in the DB is a card
+Each card can contain: Topic, Image, content. (The only required field is a topic, the rest can be null)
+Order cards by creation date (descending order) 
+Show the created date in the header of a card, if the latter is edited show the edited one instead in the same placeholder (any timestamp format is fine).
+This is an example of the following:
+ - project architecture 
+ - routing setup in SPA app
+ - responsive design
+ - Parse.com database as backend
+
+[Demo](https://nixsolutions.github.io/demo-ng2-school/). 
 
 Features
 --------
